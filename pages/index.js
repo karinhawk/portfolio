@@ -7,14 +7,12 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-   <div>
-    <Navbar />
-    <h1>Homepage</h1>
-    <p>This is a paragraph</p>
-    <p>This is a paragraph</p>
-    <p>This is a paragraph</p>
-    <Link href="/projects"><a>See Projects</a></Link>
-    <Footer />
+   <div className={styles.container}>
+    <h1 className={styles.title}>Homepage</h1>
+    <p className={styles.text}>This is a paragraph</p>
+    <p className={styles.text}>This is a paragraph</p>
+    <p className={styles.text}>This is a paragraph</p>
+    <Link href="/projects"><a className={styles.btn}>See Projects</a></Link>
    </div>
   )
 }

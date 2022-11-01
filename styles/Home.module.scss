@@ -1,0 +1,50 @@
+.title {
+  color: #333;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.text {
+  color: #777;
+}
+.btn {
+  display: block;
+  width: fit-content;
+  padding: 8px 0;
+  margin: 20px auto;
+  background: #305751;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  &:hover {
+    background: white;
+    border: 2px solid #305751;
+    color: #305751;;
+  }
+}
+.content {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+.textBlock {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+.picture {
+  border-radius: 1rem;
+}
+
+.icons {
+  height: 5rem;
+  width: 60vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon {
+    transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(0.3rem);
+  }
+}

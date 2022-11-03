@@ -10,7 +10,7 @@ a {
   text-decoration: none;
 }
 .content {
-  max-width: 62.5rem;
+  width: 85vw;
   margin: 0 auto;
 }
 nav {
@@ -22,7 +22,12 @@ nav {
   border-bottom: 1px solid #ddd;
 }
 nav a {
-  margin-left: 12px;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  transition: 0.1s ease-in-out;
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
 }
 
 nav .logo-div {
@@ -38,6 +43,12 @@ footer {
   margin-top: 60px;
   color: #777;
   border-top: 1px solid #eaeaea;
+}
+.footer-items {
+  width: 40vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
 }
 
 .not-found {

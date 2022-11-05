@@ -1,6 +1,6 @@
 import Head from "next/head"
 import styles from "../../styles/Projects.module.scss"
-import { firestore } from "../../lib/firebase.js";
+import { firestore } from "/lib/firebase.js";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import ProjectsList from "../../components/ProjectsList"
 import { useEffect, useState } from "react";
@@ -9,20 +9,16 @@ const Projects = () => {
  
   const [projects, setProjects] = useState([]);
  
-  const handleRead = () => {
+  const handleRead = async () => {
     const projectsCollection = collection(firestore, "projects");
-    getDocs(projectsCollection)
-    .then(response => {
-      // response.docs.forEach(doc => {
-      //   console.log(doc.data());
-      setProjects(response.docs)
-      })
-      // })
-    }
- 
-    useEffect(() => {
-      handleRead();
-    }, []);
+    const projectsSnapshot = await getDocs(projectsCollection);
+    const projectsList = projectsSnapshot.docs.map(doc => doc.data());
+    console.log(projectsList);
+  }
+
+  useEffect(() => {
+    handleRead();
+  }, []);
  
  
   return (
@@ -34,7 +30,7 @@ const Projects = () => {
     <div>
       <h1 className={styles.title}>My Projects</h1>
       <section>
-      <ProjectsList projectsArr={projects} />
+      {/* <ProjectsList projectsArr={projects} /> */}
       </section>
     </div>
     </>

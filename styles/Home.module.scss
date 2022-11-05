@@ -6,6 +6,11 @@
   color: rgb(71, 71, 71);
   text-align: center;
 }
+.mobileTitle {
+  display: none;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
 .btn {
   display: block;
   width: fit-content;
@@ -23,6 +28,15 @@
     color: #305751;
   }
 }
+.container {
+  height: fit-content;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .content {
   height: 100vh;
   width: 80vw;
@@ -36,10 +50,10 @@
   height: 60vh;
   width: 50vw;
   margin-top: 4rem;
-  margin-left: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .picture {
   border-radius: 1rem;
@@ -67,7 +81,7 @@
 
 .typing {
   width: 42ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(42), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -93,4 +107,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 720px) {
+  .mobileTitle {
+    display: block;
+  }
+  .content {
+    height: fit-content;
+  }
+  .wrapper {
+    display: none;
+  }
+  .textBlock {
+    width: 80vw;
+  }
+  .icons {
+    width: 70vw;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+  }
+  .wrapper2 {
+    height: 10vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing2 {
+    width: 8ch;
+    animation: typing 1.5s steps(8), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 3rem;
+  }
 }

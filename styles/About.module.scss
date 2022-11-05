@@ -1,25 +1,58 @@
+.background {
+  background: url(../public/aboutmebackground.png);
+  background-size: cover;
+  padding: 1rem;
+}
 .title {
-    color: #333;
-    padding-bottom: 20px;
+    color: rgb(250, 248, 248);
     text-align: center;
+    text-decoration: underline wavy rgb(65, 177, 138);
+    padding: 0;
   }
   .text {
-    color: rgb(71, 71, 71);
+    color: rgb(240, 239, 239);
+    font-size: 1.5rem;
+    font-weight: 600;
   }
   .content {
-    width: 80vw;
+    height: 100vh;
+    width: 100vw;
     margin-top: 2rem;
     margin-left: 5rem;
     display: flex;
     justify-content: space-evenly;
   }
   .textBlock {
-    width:30vw;
+    width: 50vw;
     margin-top: 4rem;
     margin-left: 4rem;
     display: flex;
     flex-direction: column;
   }
-  .picture {
-    border-radius: 1rem;
+
+  @media screen and (max-width: 720px) {
+    .background {
+      background: none;
+      width: 95vw;
+      padding: 0;
+    }
+    .title {
+      color: #333;
+    }
+    .text {
+      color: #333;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+    .content {
+      height: fit-content;
+      margin-left: 0;
+      align-items: center;
+    }
+    .textBlock {
+      width: 90vw;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+    }
   }

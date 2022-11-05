@@ -15,6 +15,11 @@ export default function Home() {
         <div className={styles.wrapper}>
           <h1 className={styles.typing}>&lsaquo;Karin&rsaquo;Junior Full-stack developer&lsaquo;&#47;Karin&rsaquo;</h1>
         </div>
+        <div className={styles.mobileTitle}>
+          <div className={styles.wrapper2}>
+            <h1 className={styles.typing2}>&lsaquo;Karin&#47;&rsaquo;</h1>
+          </div>
+        </div>
         <div className={styles.expand}>
           <h2 className={styles.title}>see my tech-stack</h2>
           <LinkTo to="stack" smooth={true}>

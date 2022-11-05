@@ -14,6 +14,7 @@ const Projects = () => {
     const projectsSnapshot = await getDocs(projectsCollection);
     const projectsList = projectsSnapshot.docs.map(doc => doc.data());
     console.log(projectsList);
+    setProjects(projectsList);
   }
 
   useEffect(() => {
@@ -30,8 +31,9 @@ const Projects = () => {
     <div>
       <h1 className={styles.title}>My Projects</h1>
       <section>
-      {/* <ProjectsList projectsArr={projects} /> */}
+      <ProjectsList projectsArr={projects} />
       </section>
+      <p className={styles.text}>This is just a selection! Take a look at my <a href='https://github.com/karinhawk'>GitHub</a> for more projects in various stages of development.</p>
     </div>
     </>
   )

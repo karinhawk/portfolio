@@ -6,6 +6,7 @@ import punk from "../public/projects/punkimg.png";
 import calculator from "../public/projects/calculator.png";
 import pokemon from "../public/projects/pokemon.jpg";
 import snap from "../public/projects/snap.png";
+import weather from "../public/projects/weather-app.png";
 
 const Card = ({ name, description, repo, liveSite }) => {
 
@@ -29,6 +30,9 @@ const Card = ({ name, description, repo, liveSite }) => {
       break;
     case "Vanilla Calculator":
       image = calculator
+      break;
+    case "Weather App":
+      image = weather
       break;
       default:
       image = capybara;
